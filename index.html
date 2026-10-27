@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elma Studio de Sobrancelhas</title>
+<meta name="theme-color" content="#0a0806">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0a0806;--gold:#D4AF37;--gold2:#F3D98B;--gold3:#9A7B1E;--text:#F6EFD9;--mut:#A89B78;--fd:"Cormorant Garamond",Georgia,serif;--fb:"Inter",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);overflow-x:hidden;background:
+radial-gradient(800px 460px at 50% -6%,rgba(212,175,55,.22),transparent 62%),
+radial-gradient(520px 420px at 100% 45%,rgba(212,175,55,.08),transparent 70%),
+radial-gradient(520px 420px at 0% 80%,rgba(212,175,55,.07),transparent 70%),var(--bg)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(212,175,55,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.045) 1px,transparent 1px);background-size:42px 42px;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 22%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 80% 60% at 50% 22%,#000 20%,transparent 75%)}
+.wrap{position:relative;max-width:440px;margin:0 auto;padding:44px 16px 48px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.logo{width:150px;height:150px;border-radius:50%;object-fit:cover;border:1.5px solid var(--gold);box-shadow:0 0 0 6px rgba(212,175,55,.10),0 0 40px rgba(212,175,55,.35)}
+.brow{width:60px;height:12px;margin:0 auto 6px;display:block}
+h1{margin:6px 0 0;font:700 30px/1.1 var(--fd);letter-spacing:.06em;text-transform:uppercase;text-align:center;background:linear-gradient(180deg,var(--gold2),var(--gold) 60%,var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bio{margin:0;max-width:30ch;text-align:center;color:var(--mut);font-size:14.5px;text-wrap:balance}
+.rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:4px 0 2px}
+.btn{position:relative;width:100%;display:flex;align-items:center;gap:14px;padding:15px 16px;border-radius:16px;text-decoration:none;color:var(--text);border:1px solid rgba(212,175,55,.38);background:linear-gradient(180deg,rgba(28,22,10,.92),rgba(12,9,5,.95));transition:.25s;overflow:hidden;font:inherit;cursor:pointer;text-align:left}
+.btn:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 10px 30px rgba(212,175,55,.2)}
+.ic{flex:none;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:#fff;box-shadow:0 5px 16px rgba(0,0,0,.45)}
+.ic svg{width:26px;height:26px}
+.ic.g{background:linear-gradient(145deg,var(--gold2),var(--gold) 55%,var(--gold3))}
+.ic.g svg{fill:#1a1306}
+.t{flex:1;min-width:0}
+.t b{display:block;font:700 16px var(--fb);letter-spacing:.01em}
+.t span{display:block;color:var(--mut);font-size:12.8px;margin-top:1px}
+.go{flex:none;color:var(--gold);font:600 20px var(--fb)}
+.main{border-color:var(--gold);background:linear-gradient(135deg,#e6c25a,var(--gold) 55%,#b08d22);color:#1a1306;box-shadow:0 10px 30px rgba(212,175,55,.3)}
+.main .t span{color:#4a3a0e}.main .go{color:#1a1306}
+.main .ic{box-shadow:0 5px 14px rgba(60,40,0,.35)}
+.main::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);animation:sheen 5s ease-in-out infinite}
+@keyframes sheen{0%,55%{left:-60%}100%{left:130%}}
+.stars{color:var(--gold);letter-spacing:2px;font-size:13px}
+.box{width:100%;border-radius:16px;border:1px solid rgba(212,175,55,.38);background:linear-gradient(180deg,rgba(28,22,10,.92),rgba(12,9,5,.95));padding:16px}
+.box .row{display:flex;align-items:center;gap:14px}
+.svcs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.svc{padding:10px 12px;border-radius:12px;border:1px solid rgba(212,175,55,.22);background:rgba(212,175,55,.06)}
+.svc b{display:block;font:600 12.8px/1.25 var(--fb)}
+.svc i{display:block;margin-top:2px;font:normal 600 12px var(--fb);color:var(--gold)}
+.key{margin-top:14px;font:600 14px ui-monospace,Menlo,monospace;color:var(--gold2);padding:12px 14px;border-radius:12px;border:1px dashed rgba(212,175,55,.5);background:rgba(212,175,55,.06);word-break:break-all;user-select:all}
+.copy{margin-top:10px;width:100%;border:0;border-radius:12px;padding:14px;cursor:pointer;font:700 14.5px var(--fb);color:#1a1306;background:linear-gradient(135deg,#e6c25a,var(--gold) 55%,#b08d22);box-shadow:0 8px 22px rgba(212,175,55,.3)}
+.copy:hover{filter:brightness(1.08)}
+.st{margin:8px 0 0;min-height:1.3em;font-size:12.5px;color:var(--mut);text-align:center}
+.btn:focus-visible,.copy:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.foot{margin-top:10px;text-align:center;color:var(--mut);font-size:12.5px;line-height:1.7}
+.foot b{display:block;color:var(--gold2);font:600 17px var(--fd);letter-spacing:.04em;margin-bottom:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<img class="logo" src="data:image/webp;base64,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" alt="Elma Studio de Sobrancelhas" width="150" height="150">
+<svg class="brow" viewBox="0 0 60 12" fill="none" aria-hidden="true"><path d="M2 9C14 2 34 1 58 5C40 5 20 6 2 9Z" fill="#D4AF37"/></svg>
+<h1>Elma Studio</h1>
+<p class="bio">Design de sobrancelhas e realce do olhar &#10024; Agende o seu horário</p>
+<div class="rule"></div>
+<a class="btn main" href="#" onclick="return false">
+<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+<div class="t"><b>Agendar no WhatsApp</b><span>Reserve seu horário</span></div><span class="go">→</span>
+</a>
+<a class="btn" href="#" onclick="return false">
+<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".25" stop-color="#FA7E1E"/><stop offset=".5" stop-color="#D62976"/><stop offset=".75" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><path fill="url(#igg)" d="M7.5 1h9A6.5 6.5 0 0 1 23 7.5v9a6.5 6.5 0 0 1-6.5 6.5h-9A6.5 6.5 0 0 1 1 16.5v-9A6.5 6.5 0 0 1 7.5 1Zm0 2A4.5 4.5 0 0 0 3 7.5v9A4.5 4.5 0 0 0 7.5 21h9a4.5 4.5 0 0 0 4.5-4.5v-9A4.5 4.5 0 0 0 16.5 3h-9ZM12 6.9a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 2a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></span>
+<div class="t"><b>Instagram</b><span>@elmastudio</span></div><span class="go">→</span>
+</a>
+<a class="btn" href="#" onclick="return false">
+<span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+<div class="t"><b>Avalie no Google</b><span><em class="stars" style="font-style:normal">★★★★★</em> &nbsp;Sua opinião importa</span></div><span class="go">→</span>
+</a>
+<section class="box" aria-label="Serviços">
+<div class="row">
+<span class="ic g"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 14c3-5 8-7 20-4-7-.5-13 0-20 4Zm2.6 3.2c4-2 9-2.600 14.400-1.200-5-.2-9.500.400-14.400 1.200Z"/></svg></span>
+<div class="t"><b>Serviços</b><span>Valores a partir de</span></div>
+</div>
+<div class="svcs">
+<div class="svc"><b>Design de sobrancelha</b><i>R$ 00</i></div>
+<div class="svc"><b>Design com henna</b><i>R$ 00</i></div>
+<div class="svc"><b>Brow lamination</b><i>R$ 00</i></div>
+<div class="svc"><b>Micropigmentação</b><i>R$ 00</i></div>
+</div>
+</section>
+<a class="btn" href="#" onclick="return false">
+<span class="ic g"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.250 7 13 7 13s7-7.750 7-13a7 7 0 0 0-7-7Zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5Z"/></svg></span>
+<div class="t"><b>Localização</b><span>Como chegar ao studio</span></div><span class="go">→</span>
+</a>
+<section class="box" aria-label="Chave Pix">
+<div class="row">
+<span class="ic g"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.600A3.505 3.505 0 0 0 5.283 5.640h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.790 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.600 3.600a1.730 1.730 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.770 1.770 0 0 0-2.444 0l-3.600 3.600a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/></svg></span>
+<div class="t"><b id="pxt">Chave PIX</b><span>Pagamento via Pix</span></div>
+</div>
+<div class="key" id="key">+55 77 90000-0000</div>
+<button class="copy" type="button" id="copy">Copiar chave Pix</button>
+<p class="st" id="st" role="status" aria-live="polite"></p>
+</section>
+<footer class="foot"><b>Realce o seu olhar</b>© Elma Studio</footer>
+</main>
+<script>
+(function(){var b=document.getElementById('copy'),k=document.getElementById('key'),s=document.getElementById('st');
+b.addEventListener('click',function(){var t=k.textContent.trim();
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){s.textContent='Chave copiada!'}).catch(function(){s.textContent='Selecione e copie a chave acima.'})}
+else{s.textContent='Selecione e copie a chave acima.'}})})();
+</script>
+</body>
+</html>
